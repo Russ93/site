@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+
+	<script type='text/javascript' src='http://code.jquery.com/jquery-2.0.3.js'></script>
+	<script src='//code.jquery.com/ui/1.10.4/jquery-ui.js'></script>
+	<script src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script>
+	<script type='text/javascript' src='j/m.js'></script>
+
+	<link href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css' rel='stylesheet'>
+	<link href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/flick/jquery-ui.min.css' rel='stylesheet'>
+	<style>#logo{width: 5%;height: 0;padding-bottom: 5%;border-radius: 50%;background: #076BB6; float:left;}#logo img{width:60%; margin: 15% 0 0 20%;}#close{position:fixed;top:0;left:0;z-index:5;width:100%;height:100%;background:rgba(0,0,0,.5);}#pMsg{position:fixed;z-index:6;top:25%;left:0;background:#fff;border-radius: 5px;padding: 20px;}nav{padding: 25px;}ul{padding: 0;list-style: none;margin-top: 10px;}form li{margin-top: 10px;}input, textarea{margin-bottom: 5px;}button{margin-top: 10px;float: right;}#form,#form > h3,ul,li{padding-left: 0;}.alpha{padding-left:0;}.omega{padding-right:0;}.ui-autocomplete{border:1px solid #aaa;background:#fff;color:#333;}</style>
+</head>
+<body>
+	<div class='container'>
+	<nav>
+		<div id='logo'>
+			<a href='index.php'><img src='i/l.png' /></a>
+		</div>
+		<form id='userSearch' class='col-md-11'>
+			<label>Search Users Posts</label>
+			<input id='getUsers' type='text' name='uName' class='form-control' placeholder='Enter Users Firstname' autocomplete='off'/>
+			<input id='userId' type='hidden' name='userId' value='' />
+			<input type='hidden' name='controller' value='public' />
+		</form>
+	</nav>

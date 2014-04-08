@@ -1,0 +1,125 @@
+/*------------------------- Defaults -------------------------*/
+html{
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+}
+h1, h2, h3 , h4, h5, h6, span{
+	font-family: 'Montserrat', sans-serif;
+}
+h1{
+	width: 100%;
+    display:block;
+    text-align: center;
+}
+h2{
+	
+}
+h3{
+	
+}
+article{
+    width:100%;
+    overflow:hidden;
+    margin-bottom: 45px;
+}
+li{
+    list-style: none;
+}
+/*------------------------- Nav -------------------------*/
+nav{
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    background: #fff;
+}
+nav canvas{
+    margin-top: 5px;
+}
+/*------------------------- Header -------------------------*/
+#water,#soda{
+    margin-top: 75px;
+}
+#soda{
+    float: left;
+}
+#water{
+    float: right;
+}
+section {
+    width: 49%;
+}
+/*------------------------- Body -------------------------*/
+.cenGraph canvas{
+    margin-left: 20%;
+}
+.cenGraph p{
+    width: 45%;
+    float: left;
+    margin-left: 5%;
+}
+/*------------------------- Soda -------------------------*/
+#soda .cenGraph p{
+    margin-left: 25%;
+    text-align:center;
+}
+#soda .cenGraph canvas{
+    margin-left: 28%
+}
+#gallons{
+    margin-left: 37%;
+    width: 44px;
+    height: 149px;
+    background: url(../i/coke.png);
+}
+img{
+    margin-left: 45%;
+}
+#soda ul li{
+    width: 45%;
+    text-align:center;
+    margin:0 0 45px 25%;
+}
+/*------------------------- Water -------------------------*/
+#health{
+	width: 75%;
+    margin-left: 12.5%;
+	padding: 0;
+}
+#health p{
+	margin: 40% 5% 0;
+}
+#health li:first-child dfn{
+    margin-top: 10%;
+}
+#health dfn{
+	display: block;
+	width: 75%;
+	margin: 0 auto;
+	padding-top: 10%;
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+#health li{
+	text-align: center;
+	width: 28%;
+	margin: 0 10%;
+	height:0;
+	padding-bottom: 28%;
+	border-radius: 50%;
+	overflow: hidden;
+	color:  #f9f9f9;
+	clear:  both;
+}
+#health li:not(first-child){
+	margin-top: 15px;
+}
+#health li p{
+	font-size: 1.6em;
+}
+#health li:nth-child(even){
+	background: #ACCBE8;
+	float:  right;
+}
+#health li:nth-child(odd){
+	background: #076BB6;
+}
