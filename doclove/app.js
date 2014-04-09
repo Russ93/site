@@ -160,6 +160,6 @@ app.get('/*', function(req, res){
 	// res.location()
 })
 
-httpServer.listen(3000, '162.243.34.80' , function() {
+httpServer.listen(3000, '107.170.57.28' , function() {
 	console.log('Express server listening on port 3000');
 });
