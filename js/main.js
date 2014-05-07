@@ -14,8 +14,8 @@ $('document').ready(function () {
         var canvas = $(chartText[i]).siblings('canvas'),
             canHeight = canvas.height() / 2,
             canWidth = canvas.width() / 2,
-            width = canWidth - $(chartText[i]).width() / 2,
-            height = canHeight - $(chartText[i]).height() / 2;
+            height = canHeight - $(chartText[i]).height() / 2,
+            width = canWidth - $(chartText[i]).width() / 2;
 
         $(chartText[i]).css('margin', height + "px 0 0 " + width + "px");
     }
