@@ -5,25 +5,162 @@
     <title>Deployment of Web Projects</title>
     <meta charset="utf-8" />
     <!--    Styles    -->
-    <link href='http://fonts.googleapis.com/css?family=Lato|Raleway' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700|Raleway' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
     <!--    Scripts    -->
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="js/selectivizr-min.js"></script>
+    <script type="text/javascript" src="js/easypiechart.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </head>
 
 <body>
     <nav id='nav' class='col-sm-12'>
-        <div class='col-sm-11'>
+        <div class='col-sm-8'>
             <h2>Russell Schlup</h2>
             <span class='hidden-xs'>- Web Developer</span>
         </div>
-        <ul class='col-sm-1 hidden-sm hidden-xs'>
-            <li>Work</li>
+        <ul class='col-sm-4 hidden-sm hidden-xs'>
+            <li class='col-sm-3' go='about'>About</li>
+            <li class='col-sm-3' go='skills'>Skills</li>
+            <li class='col-sm-3' go='work'>Work</li>
+            <li class='col-sm-3' go='contact'>Contact</li>
         </ul>
     </nav>
     <section id='start' class='col-sm-12'>
+        <article id='header' class='col-sm-12 col-md-8'>
+            <header class='col-sm-12'>
+                <h1>Hi, I'm
+                    <strong>Russell Schlup</strong>
+                </h1>
+                <h2 class='col-sm-12'>Super-charged Web Developer</h2>
+                <p>I am
+                    <span class="age">20</span>year old innovator from San Diego, California: Skilled, Inspiring and, Friendly. I'm passionate and I love create beautiful and useful things.</p>
+                <p>I'm great with anything you can throw at me infact
+                    <strong>I Encourage it, I love challenges</strong>.</p>
+                <p>Simplistic style. Typography and Color enthusiast. Love learning new code and ways of doing things.</p>
+                <a href='https://www.facebook.com/russbenton' target='_blank'>
+                    <button>Russell Benton on Facebook</button>
+                </a>
+                <a href='http://www.linkedin.com/in/russ93' target='_blank'>
+                    <button class='linkedIn'>Profile on LinkedIn</button>
+                </a>
+            </header>
+        </article>
+        <aside class='col-sm-4 hidden-sm hidden-xs'>
+            <div id='console'>
+            </div>
+        </aside>
+    </section>
+    <section class='col-sm-12' loc="about">
+        <article class='col-sm-12 col-md-7 col-lg-8'>
+            <h1>Well who is this guy?</h1>
+            <p>I'm a
+                <strong>
+                    <span class="age">20</span>year old Caucasian</strong>, form southern California, who is passionate about Code. I am always inspired by
+                <strong>Jeffery Zeldmann</strong>, Chris Coyier,
+                <strong>Nicholas Zakas</strong>, and Scott Kellum.</p>
+            <p>I am a
+                <strong>Web Developer</strong>, however, I do love
+                <strong>Typography</strong>,
+                <strong>Color theory</strong>, and design. I try to keep up to date with Pantone's color forecasting.</p>
+            <h3 class="quote hidden-xs">Programs must be written for people to read, and only incidentally for machines to execute.</h3>
+            <p>Through my work, I love to
+                <strong>give emotion to things</strong>I do — make them alive — I take care of every detail rigorously. Well, I remain committed to good practices and modern working methods.</p>
+            <p>I love making the
+                <strong>Cleanest code</strong>I can possible with the limitations of the W3C's Standards.</p>
+            <p>My favorite coding laguages are
+                <strong>Python</strong>, and
+                <strong>Node.js</strong>and I am very
+                <strong>Fluent</strong>in both</p>
+            <p>I am also fluent in PHP and will never touch Cold Fusion</p>
+            <a href='http://www.meetup.com/members/139195112/' target='_blank'>
+                <button class='meet'>Groups I'm a Part Of - Meetup</button>
+            </a>
+            <a href='https://github.com/Russ93' target='_blank'>
+                <button>Development - Github</button>
+            </a>
+        </article>
+        <aside class='hidden-xs hidden-sm col-md-5 col-lg-4'>
+            <h2>A day in the life of Russell</h2>
+            <ul id="timeline">
+                <li>
+                    <p>Coffee</p>
+                    <dfn>Developers drink an average of 380 cups of coffee a year</dfn>
+                </li>
+                <li>
+                    <p>Design</p>
+                    <dfn>Worldwide, a new page is designed every 0.4 seconds</dfn>
+                </li>
+                <li>
+                    <p>Build</p>
+                    <dfn>Lint! Lint! Lint! and Standardise</dfn>
+                </li>
+                <li>
+                    <p>IE</p>
+                    <dfn>Browser quirks can increase product time up to 71%</dfn>
+                </li>
+                <li>
+                    <p>Starcraft</p>
+                    <dfn>Increasing of mental quickness and problem solving</dfn>
+                </li>
+            </ul>
+        </aside>
+    </section>
+    <section class='col-xs-12 skills' loc="skills">
+        <article class='col-xs-12'>
+            <h1>Skills</h1>
+            <ul class='col-xs-12'>
+                <li class="chart col-md-3 col-xs-6" data-percent="77" color="#9E3158">
+                    <span>
+                        <img src="images/design.png" class='invColor' />
+                    </span>
+                    <label class='col-xs-12'>
+                        <h3>Design</h3>
+                        <p>Typography, Color Theory, Design Patterns</p>
+                    </label>
+                </li>
+                <li class="chart col-md-3 col-xs-6" data-percent="92" color="#B93B3E">
+                    <span>
+                        <img src="images/node.png" />
+                    </span>
+                    <label class='col-xs-12'>
+                        <h3>Front-End Dev</h3>
+                        <p>
+                            Javascript, jQuery
+                            <br />Angular
+                            <br />Backbone
+                            <br />Ember
+                        </p>
+                    </label>
+                </li>
+                <li class="chart col-md-3 col-xs-6" data-percent="96" color="#315F93">
+                    <span>
+                        <img src="images/py.png" />
+                    </span>
+                    <label class='col-xs-12'>
+                        <h3>Back-End Dev</h3>
+                        <p>Python (Bottle, Flask, GAppengine)
+                            <br />Node.js (Express, Sails)
+                            <br />PHP 5 (Slim, Fuel)
+                            <br />C++
+                        </p>
+                    </label>
+                </li>
+                <li class="chart col-md-3 col-xs-6" data-percent="98" color="#315F93">
+                    <span>
+                        <img src="images/db.png" class='invColor' />
+                    </span>
+                    <label class='col-xs-12'>
+                        <h3>Database</h3>
+                        <p>MongoDB, MySQL, PostgreSQL, Redis, MemCache, sqLite</p>
+                    </label>
+                </li>
+            </ul>
+        </article>
+    </section>
+    <section class='col-sm-12' loc="work">
         <article class='col-sm-12'>
             <h1 class='col-sm-12'>Work</h1>
             <h3 class='col-sm-12'>Class Work</h3>
@@ -132,6 +269,58 @@
             </ul>
         </article>
     </section>
+    <footer class='col-sm-12' loc="contact">
+        <section class='col-sm-12'>
+            <h1>Contact:</h1>
+            <ul class='col-sm-2'>
+                <h3>Social</h3>
+                <li class='col-sm-12'>
+                    <a href='http://www.linkedin.com/in/russ93' target='_blank'>Linked In</a>
+                </li>
+                <li class='col-sm-12'>
+                    <a href='https://www.facebook.com/russbenton' target='_blank'>Facebook</a>
+                </li>
+                <li class='col-sm-12'>
+                    <a href="https://twitter.com/russbenton93" target="_blank">Twitter</a>
+                </li>
+                <li class='col-sm-12'>
+                    <a href='https://github.com/Russ93' target='_blank'>Github</a>
+                </li>
+                <li class='col-sm-12'>
+                    <a href='http://www.meetup.com/members/139195112/' target='_blank'>Meetup</a>
+                </li>
+            </ul>
+            <ul class='col-sm-2'>
+                <h3>Legacy</h3>
+                <li class='col-sm-12'>Phone: 760-960-7096</li>
+                <li class='col-sm-12'>Email: Russ93@fullsail.edu</li>
+                <li class='col-sm-12'>Address: 300 Prince Charles ln.</li>
+                <li class='col-sm-12'>Winter Park, Fl 32792</li>
+            </ul>
+            <form role="form" class='col-sm-8'>
+                <h3>Just want to say hi?</h3>
+                <ul class='col-sm-6'>
+                    <li class='col-sm-12'>
+                        <label>Name:</label>
+                        <input name="" class="form-control" />
+                    </li>
+                    <li class='col-sm-12'>
+                        <label>Email:</label>
+                        <input name="" class="form-control" />
+                    </li>
+                    <li class='col-sm-12'>
+                        <label>Company/ Organization:</label>
+                        <input name="" class="form-control" />
+                    </li>
+                </ul>
+                <div class='col-sm-6'>
+                    <label>Message:</label>
+                    <textarea name="" class="form-control" rows="5"></textarea>
+                    <button class="col-sm-12">Send Message</button>
+                </div>
+            </form>
+        </section>
+    </footer>
 </body>
 
 </html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <title>Deployment of Web Projects</title>
+    <meta charset="utf-8" />
+    <!--    Styles    -->
+    <link href='http://fonts.googleapis.com/css?family=Lato|Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/s.css">
+    
+    <!--    Scripts    -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script src="js/Chart.js"></script>
+</head>
+<body>
+    <header class='col-sm-12'>
+        <h1 class='col-sm-12'>Deployment Strategy</h1>
+    </header>
+    <section class='col-sm-12'>
+        <form class='col-sm-4'>
+            <ul class="col-sm-9">
+                <li class='col-sm-12'><label>Start</label></li>
+                <li class="col-sm-5"><input type='text' name='start_hours' class="form-control" placeholder="Hours" /></li>
+                <li class="col-sm-1"><span>:</span></li>
+                <li class="col-sm-5"><input type='text' name='start_min'  class="form-control" placeholder="Minutes"/></li>
+                <li class='col-sm-12'><label>Code Review</label></li>
+                <li class="col-sm-5"><input type='text' name='code_hours' class="form-control" placeholder="Hours" /></li>
+                <li class="col-sm-1"><span>:</span></li>
+                <li class="col-sm-5"><input type='text' name='code_min'  class="form-control" placeholder="Minutes"/></li>
+                <li class="col-sm-12"><label>Staging Lockdown</label></li>
+                <li class="col-sm-5"><input type='text' name='stage_hours'  class="form-control" placeholder="Hours" /></li>
+                <li class="col-sm-1"><span>:</span></li>
+                <li class="col-sm-5"><input type='text' name='stage_min'  class="form-control" placeholder="Minutes"/></li>
+                <li class="col-sm-12"><label>Go Live!</label></li>
+                <li class="col-sm-5"><input type='text' name='live_hours'  class="form-control" placeholder="Hours" /></li>
+                <li class="col-sm-1"><span>:</span></li>
+                <li class="col-sm-5"><input type='text' name='live_min'  class="form-control" placeholder="Minutes"/></li>
+                <button class='btn btn-primary col-sm-10'>Start!</button>
+            </ul>
+        </form>
+        <article class="col-sm-8">
+            <h3></h3>
+            <canvas id="canvas" height="500" width="500"></canvas>
+            <img id='canvasImg' />
+        </article>
+    </section>
+</body>
+</html>

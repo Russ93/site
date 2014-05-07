@@ -14,6 +14,12 @@ html, * {
 	font-family: 'Lato' ,Avenir , Helvetica, Arial, sans-serif;
 	color: 333;
 }
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
 body{
 	width: 100%;
 	height: 700px;
@@ -31,6 +37,9 @@ h1, h2, h3, h4, h5, h6{
     box-shadow: 0 5px 10px rgba(0,0,0,0.4);
     width: 100%;
 }
+article p {
+    font-size: 1.2em;
+}
 #nav div *{
     float: left;
 }
@@ -44,12 +53,59 @@ h1, h2, h3, h4, h5, h6{
 #nav ul, nav span{
     margin-top: 8px;
 }
+header h1{
+    font-size: 5em;
+}
 ul li{
     list-style: none;
     float: left;
 }
 #start{
-    margin-top: 78px;
+    margin-top: 73px;
+}
+strong {
+    font-weight: bold;
+}
+.button,button,html input[type="button"],input[type="submit"]{
+    margin: 15px 10px 0 0;
+	padding: 15px 25px;
+    background: #333;
+    color: #f9f9f9;
+	font: normal 1.2em/1.8 'Avenir', arial, helvetica, sans-serif;
+	text-align: center;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    border: 0;
+	cursor: pointer;
+}
+.button:hover,button:hover,html input[type="button"]:hover,input[type="submit"]:hover{
+	background: #f47d43;
+    border-bottom: 2px solid #D87B56;
+    -webkit-box-shadow: inset 0 -2px #D87B56;
+	box-shadow: inset 0 -2px #D87B56;
+}
+.linkedIn:hover{
+    background: #1C87BD;
+    border-bottom: 2px solid #076BB6;
+    -webkit-box-shadow: inset 0 -2px #076BB6;
+	box-shadow: inset 0 -2px #076BB6s;
+}
+aside{
+    overflow: hidden;
+}
+#console{
+    position: absolute;
+    left:0;
+    bottom:0;
+}
+.quote{
+	color: #f47d43;
+	background-color: #f5f5f5;
+	background-image: url(../images/lq.png),url(../images/rq.png);
+	background-repeat: no-repeat;
+	background-position: left top, right bottom;
+	font-size: 2.4em;
+	padding: 15px 15px 15px 35px;
+	margin: 25px 10px;
 }
 section{
     padding-top: 25px;
@@ -58,6 +114,14 @@ section{
 section:nth-child(even){
     background: #009090;
     color: #f9f9f9;
+}
+section:nth-child(even) strong{
+    background: #009090;
+    color: #333;
+}
+section:nth-child(odd) .invColor{
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
 }
 .projects{
     overflow: hidden;
@@ -88,4 +152,126 @@ section:nth-child(even){
 .projects div img{
     max-height: 100%;
     max-width: 100%;
+}
+/*------------------------- Timeline -------------------------*/
+#timeline{
+	width: 100%;
+	padding: 0;
+}
+#timeline p{
+	margin: 35% 5% 0;
+}
+#timeline dfn{
+	display: block;
+	width: 75%;
+	margin: 0 auto;
+	padding-top: 30%;
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+#timeline li{
+	text-align: center;
+	width: 25%;
+	margin: 0 10%;
+	height:0;
+	padding-bottom: 25%;
+	border-radius: 50%;
+	overflow: hidden;
+	color:  #f9f9f9;
+	clear:  both;
+}
+#timeline li:not(first-child){
+	margin-top: 15px;
+}
+#timeline li p{
+	font-size: 1.6em;
+}
+#timeline li:nth-child(even){
+	background: #076BB6;
+	float:  right;
+}
+#timeline li:nth-child(odd){
+	background: #F47D43;
+}
+#timeline li:first-child{
+	background: #5B4F35;
+}
+#timeline li:nth-child(2){
+	background: #f47d43;
+}
+#timeline li:nth-child(3){
+	background: #B1C482;
+}
+#timeline li:nth-child(4){
+	background: #6DBACC;
+}
+#timeline li:nth-child(5){
+	background: #3E005B;
+}
+#timeline li:first-child dfn{
+	background-image: url(../images/tl-01.png);
+}
+#timeline li:nth-child(2) dfn{
+	background-image: url(../images/tl-02.png); 
+}
+#timeline li:nth-child(3) dfn{
+	background-image: url(../images/tl-03.png);
+}
+#timeline li:nth-child(4) dfn{
+	background-image: url(../images/tl-04.png);
+}
+#timeline li:nth-child(5) dfn{
+	background-image: url(../images/tl-05.png);
+}
+/*------------------------- Skills -------------------------*/
+.skills ul{
+    padding-top: 50px;
+}
+
+.chart{
+    position: relative;
+    min-height: 400px;
+}
+.chart span {
+    float: left;
+    position: absolute;
+    padding-left: 25%;
+}
+.chart span > *{
+    max-height: 84px;
+    max-width: 84px;
+}
+.chart canvas{
+    margin-left: 25%;
+}
+.chart label{
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+}
+/*------------------------- Footer -------------------------*/
+footer{
+    background: #333;
+    color: #f0f0f0;
+}
+footer a{
+    cursor: pointer;
+    color: #fff;
+}
+footer a:hover{
+    color: #AE70AF;
+}
+footer button{
+    background: #009090;
+}
+footer li{
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+footer form li{
+    margin: 0;
+    font-size: 14px;
+}
+footer button{
+    padding: 0;
 }
