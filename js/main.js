@@ -40,6 +40,7 @@ function chartSpans(){
         console.log(canvas)
         console.log(canHeight)
         console.log(canWidth)
+        console.log($(this).height() / 2)
         console.log(height)
         console.log(width)
     })
