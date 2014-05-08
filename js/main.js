@@ -36,13 +36,7 @@ function chartSpans(){
             height = canHeight - $(this).height() / 2,
             width = canWidth - $(this).width() / 2;
 
-        $(this).css('margin', height + "px 0 0 " + width + "px");  
-        console.log(canvas)
-        console.log(canHeight)
-        console.log(canWidth)
-        console.log($(this).height() / 2)
-        console.log(height)
-        console.log(width)
+        $(this).css('margin', height + "px 0 0 " + width + "px");
     })
 }
 
