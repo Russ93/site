@@ -29,16 +29,15 @@ $('document').ready(function () {
 });
 
 function chartSpans(){
-    var chartText = $('.chart span');
-    for (var i = 0; i < chartText.length; i++) {
-        var canvas = $(chartText[i]).siblings('canvas'),
+    var chartText = $('.chart span').each(function(){
+      var canvas = $(this).siblings('canvas'),
             canHeight = canvas.height() / 2,
             canWidth = canvas.width() / 2,
-            height = canHeight - $(chartText[i]).height() / 2,
-            width = canWidth - $(chartText[i]).width() / 2;
+            height = canHeight - $(this).height() / 2,
+            width = canWidth - $(this).width() / 2;
 
-        $(chartText[i]).css('margin', height + "px 0 0 " + width + "px");
-    }   
+        $(this).css('margin', height + "px 0 0 " + width + "px");  
+    })
 }
 
 // ------------------------------ Info Graphic ------------------------------ //
