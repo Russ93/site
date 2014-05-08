@@ -7,9 +7,29 @@ $('document').ready(function () {
         trackColor: false,
         scaleColor: false,
         barColor: "color"
-    })
+    });
 
-    chartText = $('.chart span')
+    chartSpans();
+
+    $("nav div").click(function () {
+        $("body").animate({
+            scrollTop: 0
+        }, 2000, 'swing');
+    });
+
+    var nav = $('nav ul > li');
+    for (var i = 0; i < nav.length; i++) {
+        $(nav[i]).click(function () {
+            $("body").animate({
+                scrollTop: $('[loc=' + $(this).attr('go') + ']').offset().top - 70
+            }, 2000, 'swing');
+        });
+    };
+
+});
+
+function chartSpans(){
+    var chartText = $('.chart span');
     for (var i = 0; i < chartText.length; i++) {
         var canvas = $(chartText[i]).siblings('canvas'),
             canHeight = canvas.height() / 2,
@@ -18,25 +38,8 @@ $('document').ready(function () {
             width = canWidth - $(chartText[i]).width() / 2;
 
         $(chartText[i]).css('margin', height + "px 0 0 " + width + "px");
-    }
-
-    $("nav div").click(function () {
-        $("body").animate({
-            scrollTop: 0
-        }, 2000, 'swing')
-    })
-
-    var nav = $('nav ul > li');
-    for (var i = 0; i < nav.length; i++) {
-        $(nav[i]).click(function () {
-            $("body").animate({
-                scrollTop: $('[loc=' + $(this).attr('go') + ']').offset().top - 70
-            }, 2000, 'swing')
-        })
-    }
-
-})
-
+    }   
+}
 
 // ------------------------------ Info Graphic ------------------------------ //
 function listr(timeLine) {
