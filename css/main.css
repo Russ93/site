@@ -38,10 +38,10 @@ h1, h2, h3, h4, h5, h6{
     width: 100%;
 }
 .container-fluid p{
-    font-size: 1em;
+    font-size: 14px;
 }
 article p {
-    font-size: 1.2em;
+    font-size: 16px;
 }
 #nav div *{
     float: left;
@@ -57,7 +57,7 @@ article p {
     margin-top: 8px;
 }
 header h1{
-    font-size: 5em;
+    font-size: 70px;
 }
 ul li{
     list-style: none;
@@ -106,7 +106,7 @@ aside{
 	background-image: url(../images/lq.png),url(../images/rq.png);
 	background-repeat: no-repeat;
 	background-position: left top, right bottom;
-	font-size: 2.4em;
+	font-size: 33px;
 	padding: 15px 15px 15px 35px;
 	margin: 25px 10px;
 }
@@ -187,7 +187,7 @@ section:nth-child(odd) .invColor{
 	margin-top: 15px;
 }
 #timeline li p{
-	font-size: 1.6em;
+	font-size: 22px;
 }
 #timeline li:nth-child(even){
 	background: #076BB6;
@@ -268,7 +268,7 @@ footer button{
     background: #009090;
 }
 footer li{
-    font-size: 1.2em;
+    font-size: 16px;
     margin-bottom: 15px;
 }
 footer form li{
