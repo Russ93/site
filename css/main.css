@@ -37,6 +37,9 @@ h1, h2, h3, h4, h5, h6{
     box-shadow: 0 5px 10px rgba(0,0,0,0.4);
     width: 100%;
 }
+.container-fluid p{
+    font-size: 1em;
+}
 article p {
     font-size: 1.2em;
 }
@@ -235,14 +238,14 @@ section:nth-child(odd) .invColor{
 .chart span {
     float: left;
     position: absolute;
-    padding-left: 25%;
+    padding-left: 18%;
 }
 .chart span > *{
     max-height: 84px;
     max-width: 84px;
 }
 .chart canvas{
-    margin-left: 25%;
+    margin-left: 18%;
 }
 .chart label{
     position: absolute;
