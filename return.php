@@ -83,5 +83,5 @@ $send = "<html>
 
 </html>";
 
-echo $_GET['callback'].'({html:'.json_encode($send).'});';
+echo $_GET['callback']."({html:$send});";
 ?>
