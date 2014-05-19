@@ -10,6 +10,9 @@ $('document').ready(function () {
     });
 
     chartSpans();
+    
+    $(".skills span").addClass('hidden-xs')
+    $(".skills canvas").addClass('hidden-xs')
 
     $("nav div").click(function () {
         $("body").animate({
@@ -27,6 +30,8 @@ $('document').ready(function () {
     };
 
 });
+
+
 
 function chartSpans(){
     var chartText = $('.chart span').each(function(){
@@ -109,9 +114,7 @@ var Typer = {
     speed: 2, // speed of the Typer
     file: "", //file, must be setted
     init: function () { // inizialize Hacker Typer
-        $.get(Typer.file, function (data) { // get the text file
-            Typer.text = data; // save the textfile in Typer.text
-        });
+        $.get(Typer.file, function (data) {self.Typer.text=data});
     },
     content: function () {
         return $("#console").html(); // get console content

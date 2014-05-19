@@ -28,7 +28,8 @@ h1, h2, h3, h4, h5, h6{
     font-family: 'Raleway' ,'Quicksand' , Helvetica, Arial, sans-serif;
 }
 #nav{
-    background: #fefefe;
+    background: #009090;
+    color: #fefefe;
     position: fixed;
     z-index: 50;
     top: 0;
@@ -115,7 +116,7 @@ section{
     padding-bottom: 25px;
 }
 section:nth-child(even){
-    background: #009090;
+    background: url(../images/ao.gif);
     color: #f9f9f9;
 }
 section:nth-child(even) strong{
@@ -252,9 +253,15 @@ section:nth-child(odd) .invColor{
     bottom: 0;
     left: 25px;
 }
+@media screen and (max-width: 768px){
+	.chart {
+        min-height: 154px;
+    }
+}
+
 /*------------------------- Footer -------------------------*/
 footer{
-    background: #333;
+    background: url(../images/ft.jpg);
     color: #f0f0f0;
 }
 footer a{
