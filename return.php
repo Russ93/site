@@ -83,6 +83,6 @@ $send = "<html>
 
 </html>";
 
-//echo json_encode($send);
-echo phpinfo();
+echo json_encode($send);
+//echo phpinfo();
 ?>
