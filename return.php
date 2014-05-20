@@ -1,7 +1,6 @@
 <?php
 header('Access-Control-Allow-Origin: *'); 
-
-$send = "<html>
+$send = array("html" => "<html>
 
 <head>
     <link rel='stylesheet' href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'>
@@ -81,7 +80,7 @@ $send = "<html>
 
 </body>
 
-</html>";
+</html>");
 
 echo json_encode($send);
 //echo phpinfo();
