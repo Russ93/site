@@ -20,6 +20,8 @@ $send = "
     </style>
     <script type='text/javascript'>
         $('document').ready(function () {
+            $('#flag').text(data.power)
+            $('#console').text(data.console)
             $('button').each(function () {
                 $(this).click(function () {
                     action = $(this).attr('action')
@@ -35,22 +37,7 @@ $send = "
                 });
             });
             setInterval(function(){
-                $.ajax({
-                    url: '/?log',
-                    type: 'get',
-                    dataType: 'json',
-                    success: function(response){
-                        $('.console').html(response);
-                    }
-                });
-                $.ajax({
-                    url: '/?log',
-                    type: 'get',
-                    dataType: 'json',
-                    success: function(response){
-                        $('.console').html(response);
-                    }
-                });
+                location.reload();
             }, 500);
         });
     </script>
@@ -66,7 +53,7 @@ $send = "
         </ul>
     </nav>
     <section class='col-md-6 text-center'>
-        <h1 id=''>System is off</h1>
+        <h1 id='flag'>System is off</h1>
         <button action='/?ON' class='btn btn-primary'>Arm the system</button>
         <button action='/?PLAY' class='btn btn-default'>Play Mario Theme Song</button>
     </section>
