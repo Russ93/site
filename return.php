@@ -41,15 +41,13 @@ $send = "
                     type: 'get',
                     dataType: 'json',
                     success: function (data) {
+                        $('#power').text('Turn off the system.')
+                        $('#power').attr('action','/?OFF')
                         if(data.power == 'The system is armed.'){
-                            $('#power').text('Turn off the system.')
-                            $('#power').attr('action','/?OFF')
-                            
                             $('#flag').text(data.power)
                             $('#console').text(data.console)
-                            
-                            console.log(data);
                         }
+                        console.log(data);
                     }
                 });
             }, 500);
