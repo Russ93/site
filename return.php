@@ -20,13 +20,6 @@ $send = "
     </style>
     <script type='text/javascript'>
         $('document').ready(function () {
-            if(data.power == 'The system is armed.'){
-                $('#power').text('Turn off the system.')
-                $('#power').attr('action','/?OFF')
-            }
-            
-            $('#flag').text(data.power)
-            $('#console').text(data.console)
             
             $('button').each(function () {
                 $(this).click(function () {
@@ -42,6 +35,24 @@ $send = "
                     $.ajax(b);
                 });
             });
+            setInterval(function(){
+                $.ajax({
+                    url: '/?console',
+                    type: 'get',
+                    dataType: 'json',
+                    success: function (data) {
+                        if(data.power == 'The system is armed.'){
+                            $('#power').text('Turn off the system.')
+                            $('#power').attr('action','/?OFF')
+                            
+                            $('#flag').text(data.power)
+                            $('#console').text(data.console)
+                            
+                            console.log(data);
+                        }
+                    }
+                });
+            }, 500);
         });
     </script>
     <nav class='col-md-12'>
