@@ -22,6 +22,11 @@ $send = "
         $('document').ready(function () {
             $('#flag').text(data.power)
             $('#console').text(data.console)
+            if(data.power == 'The system is armed.'){
+                $('#power').text('Turn off the system.')
+                $('#power').attr('action','/?OFF')
+            }
+            
             $('button').each(function () {
                 $(this).click(function () {
                     action = $(this).attr('action')
@@ -54,7 +59,7 @@ $send = "
     </nav>
     <section class='col-md-6 text-center'>
         <h1 id='flag'>System is off</h1>
-        <button action='/?ON' class='btn btn-primary'>Arm the system</button>
+        <button action='/?ON' id='power' class='btn btn-primary'>Arm the system</button>
         <button action='/?PLAY' class='btn btn-default'>Play Mario Theme Song</button>
     </section>
     <aside class='col-md-6'>
