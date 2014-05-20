@@ -60,7 +60,7 @@ $send = "<html>
     <nav class='col-md-12'>
         <ul class='col-md-12'>
             <li class='col-md-1'>
-                <img src='images/logo.png' />
+                <img src='http://107.170.57.28/images/logo.png' />
             </li>
             <li class='col-md-3'>
                 <h2>Ardu Security</h2>
