@@ -1,14 +1,15 @@
 <?php
 header('Access-Control-Allow-Origin: *'); 
-$send = "<html>
-
-<head>
-    <link rel='stylesheet' href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'>
+$send = "
+<body>
     <style>
         nav {
             background: #00979c;
             color: #fefefe;
             padding: 25px;
+        }
+        nav ul li{
+            list-style: none;
         }
         .console {
             background: #e9e9e9;
@@ -17,7 +18,6 @@ $send = "<html>
             min-height: 450px;
         }
     </style>
-    <script type='text/javascript' src='http://code.jquery.com/jquery-2.1.1.min.js'></script>
     <script type='text/javascript'>
         $('document').ready(function () {
             $('button').each(function () {
@@ -54,9 +54,6 @@ $send = "<html>
             }, 500);
         });
     </script>
-</head>
-
-<body>
     <nav class='col-md-12'>
         <ul class='col-md-12'>
             <li class='col-md-1'>
@@ -78,9 +75,7 @@ $send = "<html>
         <div class='col-md-12 console'></div>
     </aside>
 
-</body>
-
-</html>";
+</body>";
 
 echo $send;
 //echo phpinfo();
