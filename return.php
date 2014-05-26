@@ -30,6 +30,7 @@ $send = "
                         dataType: 'json',
                     };
                     $.ajax(b);
+                    update();
                 });
             });
             setInterval(update(), 1000);
