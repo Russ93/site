@@ -32,7 +32,7 @@ $send = "
                     $.ajax(b);
                 });
             });
-            setTimeout(update(), 1000);
+            setInterval(update(), 1000);
         });
         function update(){
             $.ajax({
