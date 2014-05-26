@@ -20,8 +20,8 @@ $('document').ready(function () {
         now = date.toISOString();
 
 //    var past = new Date(date - 10800000),
-//    var past = new Date(date - 21600000),
-    var past = new Date(date - 86400000),
+    var past = new Date(date - 21600000),
+//    var past = new Date(date - 86400000),
         pastStr = past.toISOString()
     console.log("start: "+pastStr)
     console.log("end: "+now)
