@@ -20,7 +20,7 @@ $send = "
     </style>
     <script type='text/javascript'>
         $('document').ready(function () {
-            
+            update();
             $('button').each(function () {
                 $(this).click(function () {
                     action = $(this).attr('action')
@@ -28,30 +28,36 @@ $send = "
                         url: action,
                         type: 'get',
                         dataType: 'json',
-                        success: function (e) {
-                            location.reload();
-                        }
                     };
                     $.ajax(b);
                 });
             });
-            setInterval(function(){
-                $.ajax({
-                    url: '/?console',
-                    type: 'get',
-                    dataType: 'json',
-                    success: function (data) {
-                        $('#power').text('Turn off the system.')
-                        $('#power').attr('action','/?OFF')
-                        if(data.power == 'The system is armed.'){
-                            $('#flag').text(data.power)
-                            $('#console').text(data.console)
-                        }
-                        console.log(data);
-                    }
-                });
-            }, 500);
+            setTimeout(update(), 1000);
         });
+        function update(){
+            $.ajax({
+                url: '/?console',
+                type: 'get',
+                dataType: 'json',
+                success: function (data) {
+                    if(data.action == '/?ON'){
+                        $('#flag').text('The System is down.')
+                        $('#power').text('Arm the system.')
+                    }else{
+                        $('#flag').text('The System is Armed.')
+                        $('#power').text('Turn the system off.')
+                    }
+                    $('#power').attr('action',data.action)   
+                    $('#console').html(data.sensorLog)
+                    console.log(data)
+                }
+                ,error: function(xhr, status, error) {
+                  console.log(xhr)
+                  console.log(status)
+                  console.log(error)
+                }
+            });
+        }
     </script>
     <nav class='col-md-12'>
         <ul class='col-md-12'>
@@ -65,13 +71,13 @@ $send = "
         </ul>
     </nav>
     <section class='col-md-6 text-center'>
-        <h1 id='flag'>System is off</h1>
+        <h1 id='flag'>The system is off.</h1>
         <button action='/?ON' id='power' class='btn btn-primary'>Arm the system</button>
         <button action='/?PLAY' class='btn btn-default'>Play Mario Theme Song</button>
     </section>
     <aside class='col-md-6'>
         <h4>Console</h4>
-        <div class='col-md-12 console'></div>
+        <div class='col-md-12 console'><p id='console'></p></div>
     </aside>
 
 </body>";
