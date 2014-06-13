@@ -27,7 +27,7 @@ app.set('view engine', 'ejs')
 app.use(express.bodyParser());
 app.use(express.cookieParser());
 app.use('/views', express.static('/views'));
-app.use(express.static('public'))
+app.use("/public", express.static(__dirname + '/public'));
 app.use(express.session({
 	'secret': 'doclove',
 	'store': sessionStore
@@ -160,6 +160,6 @@ app.get('/*', function(req, res){
 	// res.location()
 })
 
-httpServer.listen(3000, '107.170.57.28' , function() {
+httpServer.listen(3000, function() {
 	console.log('Express server listening on port 3000');
 });
