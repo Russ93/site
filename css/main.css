@@ -48,7 +48,7 @@ article p {
     float: left;
 }
 #nav span{
-    color: #888;
+    color: #fefefe;
     margin-left: 10px;
 }
 #nav h2{
@@ -113,7 +113,7 @@ aside{
 }
 section{
     padding-top: 25px;
-    padding-bottom: 25px;
+    padding-bottom: 40px;
 }
 section:nth-child(even){
     background: url(../images/ao.gif);
@@ -261,6 +261,7 @@ section:nth-child(odd) .invColor{
 
 /*------------------------- Footer -------------------------*/
 footer{
+    margin-top: 5px;
     background: url(../images/ft.jpg);
     color: #f0f0f0;
 }
