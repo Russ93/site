@@ -17,7 +17,7 @@ $('document').ready(function () {
     $("nav div").click(function () {
         $("body").animate({
             scrollTop: 0
-        }, 2000, 'swing');
+        }, 1000, 'swing');
     });
 
     var nav = $('nav ul > li');

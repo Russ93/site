@@ -8,7 +8,7 @@ if(isset($_POST['submit'])) {
 	<p>Msg: ".$_POST['comment']."</p>";
 
 	$subject = "Site Message from ".$_POST['email'];
-	mail('russellschlup@gmail.com', $subject, $msg );
+	mail('russellschlup@gmail.com', $subject, $msg);
 	header('location: /');
 
 } else {
