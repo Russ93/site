@@ -10,7 +10,7 @@ $('document').ready(function () {
     });
 
     chartSpans();
-    
+
     $(".skills span").addClass('hidden-xs')
     $(".skills canvas").addClass('hidden-xs')
 
@@ -19,6 +19,8 @@ $('document').ready(function () {
             scrollTop: 0
         }, 1000, 'swing');
     });
+
+    $(".age").text(((new Date() - new Date("11/03/1993"))/3.1556926e10).toFixed(0));
 
     var nav = $('nav ul > li');
     for (var i = 0; i < nav.length; i++) {
@@ -50,36 +52,38 @@ function listr(timeLine) {
     $('dfn').css('display', 'none');
     for (var i = 0; timeLine.length > i; i++) {
         $(timeLine[i]).mouseenter(function (e) {
+            var $this = $(this);
 
-            if (($(this).width() / $(this).parent().width()) < '.26') {
+            if (($this.width() / $this.parent().width()) < '.26') {
                 // if the width is greater than 26% dont do anything yet
-                $(this).animate({
-                    width: '50%',
+                $this.animate({
+                    'width': '50%',
                     'padding-bottom': '50%',
                     'margin-left': '0',
                     'margin-right': '0'
                 }, 200);
                 //aniamte the grow
-                $($(this).children('p')).animate({
-                    margin: '15% 10% 0'
+                $($this.children('p')).animate({
+                    'margin': '15% 10% 0'
                 }, 200);
                 // move the head up
-                $($(this).children('dfn')).show()
+                $($this.children('dfn')).show()
                 // show the dfn
             }
         });
 
         $(timeLine[i]).mouseleave(function () {
-            $(this).animate({
+            var $this = $(this);
+            $this.animate({
                 width: '25%',
                 'padding-bottom': '25%',
                 'margin-left': '10%',
                 'margin-right': '10%'
             }, 200);
-            $($(this).children('p')).animate({
+            $($this.children('p')).animate({
                 margin: '35% 5% 0'
             }, 200);
-            $($(this).children('dfn')).hide()
+            $($this.children('dfn')).hide()
         });
     }
 }
